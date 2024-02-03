@@ -1,0 +1,127 @@
+<style>
+    .Container-infor {
+        border: 1px solid black;
+        padding: 30px;
+        border-radius: 20px;
+        background-color: black;
+        box-shadow: 10px 10px 10px 10px #888888;
+        position: relative;
+        width: 500px;
+        color: rgb(113, 118, 123);
+    }
+
+    .close {
+        position: absolute;
+        left: 8px;
+        top: 4px;
+        color: rgb(113, 118, 123);
+
+    }
+
+    .headContent {
+        color: white;
+    }
+
+    .select {
+        display: flex;
+        justify-content: center;
+        color: rgb(113, 118, 123);
+        gap: 6px;
+    }
+
+    .end {
+        text-align: center;
+    }
+
+    .submit {
+        background-color: rgb(113, 118, 123);
+        border-radius: 12px;
+        border: none;
+        color: white;
+        padding: 4px 180px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 25px;
+    }
+</style>
+<script type="text/javascript">
+    $(document).ready(function () {
+        const ddlDay = document.getElementById('Day');
+        ddlDay.innerHTML += '<option value="">choose..</option>';
+        for (let i = 0; i < 31; i++) {
+            ddlDay.innerHTML += '<option value="' + (i + 1) + '">' + (i + 1) + '</option>';
+        }
+    });
+</script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        const ddlYear = document.getElementById('Year');
+        ddlYear.innerHTML += '<option value="">choose..</option>';
+        for (let i = 1899; i < 2024; i++) {
+            ddlYear.innerHTML += '<option value="' + (i + 1) + '">' + (i + 1) + '</option>';
+        }
+    });
+</script>
+
+
+<div class="d-flex justify-content-center align-items-center " style="height: 90vh;">
+    <div class="Container-infor ">
+        <div class="close"><i class="fas fa-times" style="font-size: 30px;"></i></div>
+        <div class="header">
+            <img class="" src="" alt="">
+        </div>
+        <h1 class="headContent"> Create your account</h1>
+
+        <div class="body">
+            <div class="box-floating-1" style="text-overflow: unset;">
+                <input type="text" class="form-control" id="floatingname" placeholder="Name">
+                <label for="Name" class="form-label"></label>
+            </div>
+            <div class="box-floating-2" style="text-overflow: unset; color: rgb(113, 118,123);">
+                <input type="email" class="form-control" id="floatingInput" placeholder="Emil address">
+                <label for="floatingInput"></label>
+            </div>
+            <h3 class="h3 mb-3 fw-bolder ">Date of birth</h3>
+            <p class="fw-normal ">this will not be shown pulicly. </p>
+            <div class="select">
+                <div class="box-select-1">
+                    <label for="Month" class="form-label">Month</label>
+                    <select class="box-select-1" id="Month" required>
+                        <option value="">choose..</option>
+                        <option>January</option>
+                        <option>February</option>
+                        <option>March</option>
+                        <option>April</option>
+                        <option>May</option>
+                        <option>June</option>
+                        <option>July</option>
+                        <option>August</option>
+                        <option>September</option>
+                        <option>October</option>
+                        <option>November</option>
+                        <option>December</option>
+                    </select>
+                </div>
+                <div class="box-select-2">
+                    <label for="Day" class="form-label">Day</label>
+                    <select class="box-select-2" id="Day" required>
+
+                    </select>
+
+                </div>
+                <div class="box-select-3">
+                    <label for="Year" class="form-label">Year</label>
+                    <select class="box-select-3" id="Year" required>
+                    
+                    </select>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="end">
+                <button class="submit">Next</button>
+            </div>
+        </div>
+    </div>
